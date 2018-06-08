@@ -56,10 +56,7 @@
     } 
     else if($message == "video"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "test";
-        $arrayPostData['messages'][0]['text'] = "Test Video";
-        $arrayPostData['messages'][1]['type'] = "video";
-        $arrayPostData['messages'][1]['video'] = "Video.mp4";
+        $arrayPostData['messages'][0]['type'] = "video";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 function replyMsg($arrayHeader,$arrayPostData){
