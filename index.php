@@ -78,7 +78,14 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
         $arrayPostData['messages'][0]['packageId'] = "2";
-        $arrayPostData['messages'][0]['stickerId'] = "14";
+        $arrayPostData['messages'][0]['stickerId'] = "24";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else{
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "sticker";
+        $arrayPostData['messages'][0]['packageId'] = "1";
+        $arrayPostData['messages'][0]['stickerId'] = "129";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
