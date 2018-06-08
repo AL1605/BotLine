@@ -57,6 +57,31 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+
+    $user = $arrayJson['events'][0]['source']['userId'];
+
+    if($user == "U4e0ed6cc4fac7cd58337ac7dcc62e673"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "sticker";
+        $arrayPostData['messages'][0]['packageId'] = "2";
+        $arrayPostData['messages'][0]['stickerId'] = "34";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($user == "U09e811c2ffa93f87bda22bcbfc51922b"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "sticker";
+        $arrayPostData['messages'][0]['packageId'] = "1";
+        $arrayPostData['messages'][0]['stickerId'] = "130";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    else if($user == "U6b1200232c25b60e86c9dac173a9402a"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "sticker";
+        $arrayPostData['messages'][0]['packageId'] = "2";
+        $arrayPostData['messages'][0]['stickerId'] = "14";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init(); 
