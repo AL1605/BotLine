@@ -54,7 +54,7 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-    else if($message == "video"){
+    else if($message == "test"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "template";
         $arrayPostData['messages'][0]['template'] = '{
