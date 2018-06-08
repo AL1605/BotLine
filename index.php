@@ -54,7 +54,7 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-    else if(strtolower($message) == "nectec"){
+    else if($message == "nectec"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "อย่าทิ้งกันไป";
