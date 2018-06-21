@@ -58,11 +58,39 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
+/*
+{
+	"type": "bubble",
+	"direction": "ltr",
+	"styles": {
+		"header": {
+			"backgroundColor": "#ffaaaa",
+		},
+		"body": {
+			"backgroundColor": "#aaffaa",
+			"separator": true,
+			"separatorColor": "#efefef"
+		},
+		"footer": {
+			"backgroundColor": "#aaaaff"
+		}
+	},
+	"header": {},
+	"hero": {},
+	"body": {},
+	"footer": {}
+}
+*/
+
     else if($message == "test"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "flex";
-        $arrayPostData['messages'][0]['altText'] = "This is a Flex message";
-        $arrayPostData['messages'][0]['contents'] = "Test AL";
+        $arrayPostData['messages'][0]['type'] = "bubble";
+        $arrayPostData['messages'][0]['direction'] = "ltr";
+        $arrayPostData['messages'][0]['styles']['header']['backgroundColor'] = "#ffaaaa";
+        $arrayPostData['messages'][0]['styles']['body']['backgroundColor'] = "#aaffaa";
+        $arrayPostData['messages'][0]['styles']['body']['separator'] = true;
+        $arrayPostData['messages'][0]['styles']['body']['separatorColor'] = "#efefef";
+        $arrayPostData['messages'][0]['styles']['footer']['backgroundColor'] = "#aaaaff";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
