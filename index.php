@@ -91,6 +91,10 @@
         $arrayPostData['messages'][0]['styles']['body']['separator'] = true;
         $arrayPostData['messages'][0]['styles']['body']['separatorColor'] = "#efefef";
         $arrayPostData['messages'][0]['styles']['footer']['backgroundColor'] = "#aaaaff";
+        $arrayPostData['messages'][0]['header'] = "";
+        $arrayPostData['messages'][0]['hero'] = "";
+        $arrayPostData['messages'][0]['body'] = "";
+        $arrayPostData['messages'][0]['footer'] = "";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
