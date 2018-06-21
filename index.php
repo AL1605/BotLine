@@ -58,6 +58,15 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
+    else if($message == "test"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "flex";
+        $arrayPostData['messages'][0]['altText'] = "This is a Flex message";
+        $arrayPostData['messages'][0]['contents'] = "Test AL";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
+    /*
     $user = $arrayJson['events'][0]['source']['userId'];
 
     if($user == "U4e0ed6cc4fac7cd58337ac7dcc62e673"){
@@ -88,7 +97,7 @@
         $arrayPostData['messages'][0]['stickerId'] = "129";
         replyMsg($arrayHeader,$arrayPostData);
     }
-
+    */
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init(); 
