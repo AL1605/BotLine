@@ -58,47 +58,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
-/*
-{
-	"type": "bubble",
-	"direction": "ltr",
-	"styles": {
-		"header": {
-			"backgroundColor": "#ffaaaa",
-		},
-		"body": {
-			"backgroundColor": "#aaffaa",
-			"separator": true,
-			"separatorColor": "#efefef"
-		},
-		"footer": {
-			"backgroundColor": "#aaaaff"
-		}
-	},
-	"header": {},
-	"hero": {},
-	"body": {},
-	"footer": {}
-}
-*/
-
-    else if($message == "test"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "bubble";
-        $arrayPostData['messages'][0]['direction'] = "ltr";
-        $arrayPostData['messages'][0]['styles']['header']['backgroundColor'] = "#ffaaaa";
-        $arrayPostData['messages'][0]['styles']['body']['backgroundColor'] = "#aaffaa";
-        $arrayPostData['messages'][0]['styles']['body']['separator'] = true;
-        $arrayPostData['messages'][0]['styles']['body']['separatorColor'] = "#efefef";
-        $arrayPostData['messages'][0]['styles']['footer']['backgroundColor'] = "#aaaaff";
-        $arrayPostData['messages'][0]['header'] = "";
-        $arrayPostData['messages'][0]['hero'] = "";
-        $arrayPostData['messages'][0]['body'] = "";
-        $arrayPostData['messages'][0]['footer'] = "";
-        replyMsg($arrayHeader,$arrayPostData);
-    } 
-
-    /*
+   /*
     $user = $arrayJson['events'][0]['source']['userId'];
 
     if($user == "U4e0ed6cc4fac7cd58337ac7dcc62e673"){
